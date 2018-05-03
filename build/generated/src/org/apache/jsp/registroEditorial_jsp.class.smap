@@ -1,0 +1,16 @@
+SMAP
+registroEditorial_jsp.java
+JSP
+*S JSP
+*F
++ 0 registroEditorial.jsp
+registroEditorial.jsp
++ 1 css.jsp
+css.jsp
+*L
+5,9:49
+1#1,33:58
+13#0,601:91
+614:692,3
+615,323:695
+*E
