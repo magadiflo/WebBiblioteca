@@ -556,13 +556,14 @@
                                         <!-- div.table-responsive -->
                                         <!-- div.dataTables_borderWrap -->
                                         <div>
+                                             <!-- action="CategoriaControl -> Corresponde a la clase java servlet ubicada en controller" -->
                                             <form action="CategoriaControl" method="POST" class="form-horizontal">
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label no-padding-rigth">
                                                         Código:
                                                     </label>
                                                     <div class="col-sm-9">
-                                                        <input type="text" name="codigo" value="" placeholder="Código de la categoría"/>
+                                                        <input type="text" name="codigo" value="" placeholder="Código de la categoría" disabled="true"/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -577,7 +578,9 @@
                                                     <i class="fa fa-save"></i>
                                                     Registrar
                                                 </button>
-                                                <!-- 05 Manejo de formularios Web - 022 Conceptos previos sobre los servlets -->
+                                                <div>
+                                                    <%= (request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "") %>
+                                                </div>
                                             </form>
                                         </div>
                                     </div><!-- /.modal-content -->

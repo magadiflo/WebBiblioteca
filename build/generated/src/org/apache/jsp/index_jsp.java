@@ -49,7 +49,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Inicio</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body\n");
+      out.write("        ");
+      out.write("\n");
       out.write("        ");
       if (true) {
         _jspx_page_context.forward("listarLibros.jsp");

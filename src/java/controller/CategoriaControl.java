@@ -1,11 +1,13 @@
 package controller;
 
+import dao.CategoriaDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Categoria;
 
 public class CategoriaControl extends HttpServlet {
 
@@ -61,7 +63,19 @@ public class CategoriaControl extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        String nombre = request.getParameter("nombre");
+        Categoria categoria = new Categoria();
+        categoria.setNombre(nombre);
+        
+        if(CategoriaDao.registrar(categoria)){
+            request.setAttribute("mensaje", "Registro correcto de la categoría " + nombre);
+        }else{
+            request.setAttribute("mensaje", "Error al registrar la categoría " + nombre);
+        }
+        //Se redireccionará hacia el registroCategoria.jsp
+        request.getRequestDispatcher("registroCategoria.jsp").forward(request, response);
+        
     }
 
     /**
