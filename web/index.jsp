@@ -10,8 +10,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title>
     </head>
-    <body>
-        <h1>GESTIÓN DE LIBROS DE BIBLIOTECA...</h1>
-        <p>************* ESTAMOS TRABAJANDO ************¡¡¡¡¡¡</p>
+    <body
+        <%-- Redireccionará al archivo listarLibros.jsp --%>
+        <jsp:forward page="listarLibros.jsp"></jsp:forward>
     </body>
 </html>
