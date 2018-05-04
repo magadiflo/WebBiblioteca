@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" type="image/icon" href="images/icono.ico" />
         <title>Registro de Editorial</title>
         <%@include file="css.jsp" %>
 

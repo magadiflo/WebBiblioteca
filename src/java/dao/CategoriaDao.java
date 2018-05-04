@@ -15,11 +15,9 @@ public class CategoriaDao {
             Connection con = Conexion.connectar();
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, categoria.getNombre());
-            if(ps.executeUpdate() > 0){
-                return true;
-            }else{
-                return false;
-            }
+            
+            return ps.executeUpdate() > 0;
+            
         } catch (SQLException ex) {
             return false;
         }  
@@ -39,10 +37,27 @@ public class CategoriaDao {
                 categoria.setNombre(rs.getString("nombre")); 
                 lista.add(categoria);
             }
+            
             return lista;
+            
         } catch (SQLException ex) {
             return null;            
         }  
+    }
+    
+    public static String getCategoria(int codigo) {
+        try {
+            String sql = "SELECT nombre FROM Categoria WHERE codigo = ?";
+            Connection con = Conexion.connectar();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, codigo);
+            ResultSet rs = ps.executeQuery();
+            
+            return rs.next() ? rs.getString(1) : "--";
+
+        } catch (SQLException ex) {
+            return "--";
+        }
     }
 
 }

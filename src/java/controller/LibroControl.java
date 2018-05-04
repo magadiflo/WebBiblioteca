@@ -96,20 +96,23 @@ public class LibroControl extends HttpServlet {
                 if (LibroDao.registrar(libro)) {
                     request.setAttribute("mensaje", "El libro: " + titulo + ", se registró correctamente.");
                 } else {
-                    request.setAttribute("mensaje", "Error al registrar el libro: " + titulo  + " , accion :" + accion);
-                }   break;
+                    request.setAttribute("mensaje", "Error al registrar el libro: " + titulo + " , accion :" + accion);
+                }
+                break;
             case "actualizar":
                 if (LibroDao.actualizar(libro)) {
                     request.setAttribute("mensaje", "El libro: " + titulo + ", se actualizó.");
                 } else {
                     request.setAttribute("mensaje", "Error al actualizar el libro: " + titulo);
-                }   break;
+                }
+                break;
             case "eliminar":
                 if (LibroDao.eliminar(libro)) {
-                    request.setAttribute("mensaje", "El libro: " + titulo + ", fue eliminado.");
+                    request.setAttribute("mensaje", "El libro fue eliminado.");
                 } else {
-                    request.setAttribute("mensaje", "Error al eliminar el libro: " + titulo);
-                }   break;
+                    request.setAttribute("mensaje", "Error al eliminar el libro");
+                }
+                break;
             default:
                 request.setAttribute("mensaje", "Acción desconocida: " + accion);
                 break;

@@ -41,25 +41,26 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Inicio</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <link rel=\"shortcut icon\" type=\"image/icon\" href=\"images/icono.ico\" />\r\n");
+      out.write("        <title>Inicio</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body>\r\n");
       out.write("        ");
-      out.write("\n");
+      out.write("\r\n");
       out.write("        ");
       if (true) {
         _jspx_page_context.forward("listarLibros.jsp");
         return;
       }
-      out.write("\n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
